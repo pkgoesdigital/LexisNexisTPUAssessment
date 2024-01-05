@@ -1,0 +1,469 @@
+body {
+  background: #e3e4e3;
+  font-family: "source-sans-pro", sans-serif;
+  font-size: 14px;
+  /*margin-right: 25%;
+  margin-left: 25%;*/
+  font-weight: 400;
+}
+@media only screen and (max-width: 1024px) {
+  body {
+    margin-left: 22px !important;
+    margin-right: 22px !important;
+  }
+  .custom-report-btn {
+    padding-top: 14px !important;
+  }
+  p {
+    font-size: 14px !important;
+    vertical-align: -7px !important;
+    line-height: 22px !important;
+  }
+  sup {
+    font-size: 7px !important;
+  }
+  .center {
+    margin-top: -14px !important;
+  }
+  .answer {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+  .custom-report-btn {
+    width: 234px !important;
+  }
+  .continue-btn {
+    margin: 12px 0px 12px 28px !important;
+    height: 34px !important;
+  }
+  .back-btn {
+    margin: 12px 0px 12px 28px !important;
+    height: 34px !important;
+  }
+  .previous {
+    font-size: 14px !important;
+    vertical-align: -8px !important;
+    margin: 12px 0px 12px 0px !important;
+    padding: 6px 12px 6px 0px !important;
+  }
+  .question {
+    font-size: 32px !important;
+    line-height: 40px !important;
+  }
+  .question-num {
+    font-size: 32px !important;
+    line-height: 40px !important;
+    margin-right: 16px !important;
+  }
+  #step-context {
+    font-size: 18px !important;
+    line-height: 24px !important;
+    padding: 0px !important;
+    margin-bottom: 24px !important;
+  }
+  #summary {
+    margin: 48px 79px 0px 79px !important;
+  }
+  /* Min Height added to keep survey content size consistent (Override for tablet) RE: "Layout Issue" */
+  #LN-Survey-Content {
+    min-height: fit-content !important;
+  }
+  .level {
+    font-size: 32px !important;
+    line-height: 40px !important;
+  }
+  .rank {
+    font-size: 20px !important;
+    line-height: 28px !important;
+  }
+  .final-context {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+  .progress-percentage {
+    font-size: 14px !important;
+  }
+  .left-arrow-svg {
+    vertical-align: -10px !important;
+  }
+  .chevrons-right-svg {
+    vertical-align: -10px !important;
+  }
+}
+
+@media only screen and (max-width: 417px) {
+  body {
+    margin: 0px 16px 24px 16px !important;
+  }
+  p {
+    font-size: 14px !important;
+    vertical-align: -7px !important;
+  }
+  sup {
+    font-size: 7px !important;
+  }
+  .question {
+    font-size: 24px !important;
+    line-height: 32px !important;
+    margin-bottom: 16px !important;
+  }
+  .question-num {
+    font-size: 24px !important;
+    line-height: 32px !important;
+  }
+  .hiker-container {
+    margin: auto !important;
+  }
+  .progress-container {
+    width: 90% !important;
+    margin-bottom: 32px !important;
+  }
+  .radio-svg {
+    margin-top: 2px !important;
+  }
+  .custom-report-btn {
+    height: 34px !important;
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+    width: 93% !important;
+  }
+  .continue-btn {
+    margin: 12px 0px 12px 28px !important;
+    height: 34px !important;
+  }
+  #step-context {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+  .chevrons-right-svg {
+    vertical-align: -10px !important;
+  }
+  .back-btn-hidden {
+    width: 105px !important;
+  }
+  #final-svg {
+    margin-top: 24px !important;
+    text-align: center !important;
+    margin-left: 0px !important;
+  }
+  #summary {
+    margin: 0px !important;
+  }
+  /* Min Height added to keep survey content size consistent (Override for mobile) RE: "Layout Issue" */
+  #LN-Survey-Content {
+    min-height: fit-content !important;
+  }
+  #summary-box {
+    display: block !important;
+    margin-top: 33px !important;
+  }
+  /* Force questions to display as stacked */
+  #question-container {
+    display: block !important;
+  }
+  #question-group-1 {
+    display: block !important;
+  }
+  #question-group-1 > div {
+    margin-right: 0px !important;
+  }
+  #question-group-2 {
+    display: block !important;
+  }
+}
+
+/* START TOP LEVEL STYLES */
+p {
+  display: inline;
+  font-size: 16px;
+  color: #fff;
+  line-height: 24px;
+}
+sup {
+  font-size: 10px;
+}
+#question-container {
+  display: flex;
+}
+#summary-box {
+  align-items: self-start;
+  display: flex;
+  margin-top: 88px;
+}
+/* Min Height added to keep survey content size consistent RE: "Layout Issue" */
+#LN-Survey-Content {
+  min-height: 700px;
+}
+.question {
+  border-radius: 5px;
+  margin-bottom: 24px;
+  cursor: pointer;
+  font-size: 36px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 44px;
+  gap: 4px;
+}
+.question-num {
+  color: #ed1c24;
+  font-size: 36px;
+  display: inline;
+  font-weight: 300;
+  line-height: 44px;
+  margin-right: 8px;
+}
+.final-context {
+  justify-content: center;
+  flex-shrink: 0;
+  color: #444;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 22px;
+}
+.answer {
+  color: #444;
+  font-size: 20px;
+  line-height: 28px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  transition: opacity 0.1s ease, background-color 0.25s ease,
+    margin-bottom 0.3s ease, padding-top 0.3s ease, padding-right 0.3s ease,
+    padding-bottom 0.3s ease, padding-left 0.3s ease;
+  opacity: 0;
+}
+/* Hover state for .answer class */
+.answer:hover {
+  background-color: #f1f1f1;
+  padding-top: 14px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  margin-bottom: 6px;
+}
+/* Active state for .answer class */
+.answer.active {
+  background-color: #00778b;
+  color: #fff;
+  border: 1px solid #8abfcc;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.13);
+}
+/* Active state for .answer class */
+.answer.active {
+  background-color: #00778b;
+  color: #fff;
+  border: 1px solid #8abfcc;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.13);
+}
+.answer > div > svg {
+  display: inline-block;
+  margin-right: 8px;
+  fill: #444;
+}
+.answer.active > div > svg {
+  fill: #fff;
+}
+.left-arrow-svg {
+  vertical-align: -2px;
+  margin-right: 8px;
+}
+.chevrons-right-svg {
+  vertical-align: -3px;
+  color: #fff;
+  margin-right: 8px;
+}
+.score {
+  padding: 16px;
+  width: 384px;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #8abfcc;
+  background-color: #00778b;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.level {
+  color: #000;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 44px;
+  display: flex;
+}
+.rank {
+  color: #444;
+  font-weight: 600;
+  line-height: 32px;
+  display: flex;
+  font-size: 24px;
+  margin-top: 4px;
+}
+.back-btn {
+  cursor: pointer;
+  display: none;
+  margin: 8px 8px 8px 0px;
+  width: 50%;
+  padding: 2px 12px;
+  height: 36px;
+  font-size: 16px;
+}
+.back-btn-hidden {
+  display: block;
+  width: 50%;
+  cursor: none;
+}
+.previous {
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-flex;
+  padding: 6px 12px 6px 0px;
+}
+.previous-hidden {
+  color: #fff;
+  cursor: none;
+}
+.hide {
+  display: none !important;
+}
+.continue-btn {
+  background-color: #ed1c24;
+  display: none;
+  width: 50%;
+  padding: 12px 12px;
+  gap: 8px;
+  border-radius: 5px;
+  height: 50px;
+  font-size: 16px;
+}
+/* Hover state for continue button class */
+.continue-btn:hover {
+  background-color: #b52025;
+}
+/* Make button appear disabled until user clicks on an answer */
+.continue-btn.inactive {
+  background-color: #c2c2c2;
+}
+
+/* cursor pointer style RE: "UI Issue" */
+.custom-report-btn {
+  background-color: #ed1c24;
+  margin: 24px 0px;
+  display: none;
+  width: 50%;
+  cursor: pointer;
+  padding: 5px 12px;
+  gap: 8px;
+  border-radius: 5px;
+  height: 36px;
+  font-size: 16px;
+}
+.center {
+  text-align: center;
+  margin-top: 0px;
+}
+.left {
+  text-align: left;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.divider {
+  border-top: 1px solid #c8c9c7;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.progress-container {
+  width: 95%;
+  height: 20px;
+  background-color: #eee;
+  position: relative;
+  margin-bottom: 48px;
+  border-radius: 10px;
+}
+.hiker-container {
+  width: 95%;
+  height: 100px;
+  position: relative;
+}
+#hiker {
+  transition: margin-left 1.5s ease;
+}
+.progress-bar {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #eee !important;
+}
+.progress-bar__fill {
+  fill: #00778b; /* Progress bar fill color */
+  border-radius: 10px;
+  transition: width 1.3s ease;
+}
+.progress-percentage {
+  position: absolute;
+  top: 50%;
+  margin-left: 6px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.radio-svg {
+  margin-top: 3px;
+}
+#step-context {
+  color: #444;
+  font-size: 20px;
+  margin-top: 8px;
+  margin-bottom: 32px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+#question-group-1 {
+  display: flex;
+  flex-direction: column;
+  min-width: 50%;
+}
+#question-group-1 > div {
+  margin-right: 24px;
+}
+#question-group-2 {
+  display: flex;
+  flex-direction: column;
+  min-width: 50%;
+}
+#final-svg {
+  margin-left: 101px;
+}
+#summary {
+  display: none;
+}
+#survey,
+#custom-report-btn,
+#continue-btn {
+  display: none;
+}
+.footer {
+  margin-top: 30px;
+}
+.wrapper1 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.progress-bar {
+  background-color: #eee !important;
+}
+.footer p {
+  color: #bdbdbd;
+  font-size: 12px;
+}
