@@ -226,7 +226,9 @@ function populateStep() {
     }
 
     // If phase isn't survey, hide the continue button
-    if (!phase === "survey") {
+    // Was `if (!phase === "survey")`, which never ran: `!phase` on a
+    // non-empty string is `false`, and `false === "survey"` is always false.
+    if (phase !== "survey") {
       $("#continue-btn").hide();
     }
 
