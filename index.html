@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TPU Maturity Model Assessment</title>
     <script src="https://cdn.jsdelivr.net/jquery/1.8.3/jquery-1.8.3.min.js"></script>
@@ -1437,7 +1436,10 @@
           }
 
           // If phase isn't survey, hide the continue button
-          if (!phase === "survey") {
+          // Was `if (!phase === "survey")`, which never ran: `!phase` on a
+          // non-empty string is `false`, and `false === "survey"` is always
+          // false.
+          if (phase !== "survey") {
             $("#continue-btn").hide();
           }
 
